@@ -10,4 +10,8 @@ server_1.use(cors());
 server_1.use(express.json());
 server_1.use(requestLogger("SERVER 1"));
 
+server_1.get("/health", (req, res) => {
+    res.status(200).json({ message: "SERVER 1 is running" })
+});
+
 export default server_1;

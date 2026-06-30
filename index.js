@@ -16,6 +16,10 @@ LOAD_BALANCER.use(requestLogger("LOAD BALANCER"));
 
 const LOAD_BALANCER_PORT = process.env.LOAD_BALANCER_PORT || 3000;
 
+LOAD_BALANCER.get("/health", (req, res) => {
+    res.status(200).json({ message: "Load Balancer is running" })
+});
+
 ServerSpinner()
     .then(() => {
         LOAD_BALANCER.listen(LOAD_BALANCER_PORT, () => {
