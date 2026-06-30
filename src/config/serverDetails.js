@@ -9,7 +9,8 @@ const SERVER_DETAILS = [
         "port": SERVER_1_PORT,
         "host": "localhost",
         "url": `http://localhost:${SERVER_1_PORT}`,
-        "alive": true
+        "alive": true,
+        "weight": 3
     },
     {
         "id": 2,
@@ -17,7 +18,8 @@ const SERVER_DETAILS = [
         "port": SERVER_2_PORT,
         "host": "localhost",
         "url": `http://localhost:${SERVER_2_PORT}`,
-        "alive": true
+        "alive": true,
+        "weight": 2
     },
     {
         "id": 3,
@@ -25,7 +27,8 @@ const SERVER_DETAILS = [
         "port": SERVER_3_PORT,
         "host": "localhost",
         "url": `http://localhost:${SERVER_3_PORT}`,
-        "alive": true
+        "alive": true,
+        "weight": 1
     }
 ]
 
